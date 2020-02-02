@@ -1,0 +1,12 @@
+{% extends 'app1/header.html' %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+{{ form.as_p }}
+<button class="btn" type="submit">Login</button>
+<p>Dont have an account yet ? click <a href="/">here</a>  to create your account</p>
+<p>Did you forget your password ? click <a href="#">here</a> to retrieve your password </p>
+</form>
+<br><br><br>
+{% endblock %}

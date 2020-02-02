@@ -1,0 +1,13 @@
+{% extends "app1/header.html" %}
+
+{% block content %}
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    fefe
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "app1/header.html" %}
+
+
+{% block content %} 
+<h2> Create Your Account Here</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn" type="submit">Register</button>
+        <br><br>
+    </form>
+{% endblock content %}

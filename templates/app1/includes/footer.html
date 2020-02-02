@@ -1,0 +1,34 @@
+<footer class="page-footer">
+    <!-- <div class="container"> -->
+    <div class="row">
+        <div class="col l6 s12">
+            <h5 class="white-text">Learn more about this application</h5>
+            <p class="grey-text text-lighten-4">This is just an immitation of Facebook.React by posting something on 
+                this forum. Click <a style="color: blue;" href="{% url 'post' %}">here</a>
+                to post something.
+            </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+                    {% if user.is_authenticated %}
+                    <li><a style="color: white;" href="/">View Stories</a></li>
+                    <li><a style="color: white;" href="{% url 'change_password' %}">Change password</a></li>
+                    <li><a style="color: white;" href="{% url 'profile' user.id %}">Edit Profile</a></li>
+                    <li><a style="color: white;" href="{% url 'post' %}">Whats in your mind {{ user.username }} ?</a></li>
+                    <li><a style="color: white;" href="/logout">Logout</a></li>
+                    {% else %}
+                    <li><a style="color: white;" href="/signup">Create your Account</a></li>
+                    <li><a style="color: white;" href="/login">Login</a></li>
+                    {% endif %}
+            </ul>
+        </div>
+    </div>
+    <!-- </div> -->
+    <div class="footer-copyright">
+        <div class="container">
+            © 2020 project made by Macurrent
+            <a class="grey-text text-lighten-4 right"  href="#!"><h5>Facebook</h5></a>
+        </div>
+    </div>
+</footer>

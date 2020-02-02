@@ -1,0 +1,11 @@
+ {% extends "app1/header.html" %} 
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn" type="submit">Edit</button>
+    <br><br><br>
+</form>
+
+{% endblock %}
+ 
